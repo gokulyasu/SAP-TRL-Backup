@@ -8,6 +8,8 @@
     dataClass: #MIXED
 }
 define view entity zgp_cds_dvw_booking as select from /dmo/booking_m
+association [0..*] to zgp_cds_dvw_bookingsuppl as bookingSuppl on $projection.TravelId = bookingSuppl.TravelId
+and $projection.BookingId =  bookingSuppl.BookingId
 {
     key travel_id as TravelId,
     key booking_id as BookingId,
@@ -20,5 +22,9 @@ define view entity zgp_cds_dvw_booking as select from /dmo/booking_m
     flight_price as FlightPrice,
     currency_code as CurrencyCode,
     booking_status as BookingStatus,
-    last_changed_at as LastChangedAt
+    last_changed_at as LastChangedAt,
+    
+//    Association
+    bookingSuppl
+    
 }

@@ -7,8 +7,14 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
+@UI.headerInfo: {
+    typeName: 'Travel',
+    typeNamePlural: 'Travels'
+}
 define view entity zgp_cds_dvw_travel
-  as select from /dmo/travel_m
+  as select from /dmo/travel_m 
+  association [0..*] to zgp_cds_dvw_booking as booking on $projection.TravelId = booking.TravelId
 {
   key travel_id       as TravelId,
       agency_id       as AgencyId,
@@ -25,5 +31,8 @@ define view entity zgp_cds_dvw_travel
       created_by      as CreatedBy,
       created_at      as CreatedAt,
       last_changed_by as LastChangedBy,
-      last_changed_at as LastChangedAt
+      last_changed_at as LastChangedAt,
+      
+//      Association
+booking
 }
