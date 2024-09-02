@@ -1,0 +1,4 @@
+@EndUserText.label: 'Booking Service'
+define service ZGP_SRV_Booking {
+  expose ZGP_CDS_Booking;
+}
