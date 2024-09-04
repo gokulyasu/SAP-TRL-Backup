@@ -1,0 +1,5 @@
+@EndUserText.label: 'Curd List Service'
+define service ZGP_SRV_CURD_LIST {
+  expose ZGP_I_Travel_m;
+  expose ZGP_I_Booking_M;
+}

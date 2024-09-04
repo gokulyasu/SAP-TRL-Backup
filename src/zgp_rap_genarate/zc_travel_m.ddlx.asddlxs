@@ -11,7 +11,8 @@ annotate view ZC_TRAVEL_M with
     purpose: #STANDARD, 
     position: 10 , 
     type: #IDENTIFICATION_REFERENCE
-  } ]
+  } ,
+  { label: 'Booking', type: #LINEITEM_REFERENCE,position: 20,targetElement: 'booking'}]
   @UI.identification: [ {
     position: 10 , 
     label: 'Travel ID'

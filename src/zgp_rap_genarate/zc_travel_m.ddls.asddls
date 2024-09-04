@@ -20,5 +20,5 @@ define root view entity ZC_TRAVEL_M
   CreatedAt,
   LastChangedBy,
   LastChangedAt
-  
+  ,booking
 }

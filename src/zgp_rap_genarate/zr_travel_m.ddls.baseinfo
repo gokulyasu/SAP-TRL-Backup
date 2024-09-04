@@ -6,7 +6,9 @@
 "/DMO/TRAVEL_M"
 ],
 "ASSOCIATED":
-[],
+[
+"ZGP_CDS_DVW_BOOKING"
+],
 "BASE":
 [],
 "ANNO_REF":

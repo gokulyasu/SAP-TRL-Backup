@@ -7,11 +7,17 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+@Metadata.allowExtensions: true
 define view entity zgp_cds_dvw_booking as select from /dmo/booking_m
-association [0..*] to zgp_cds_dvw_bookingsuppl as bookingSuppl on $projection.TravelId = bookingSuppl.TravelId
-and $projection.BookingId =  bookingSuppl.BookingId
+association to parent zgp_cds_dvw_travel as travel on $projection.TravelId = travel.TravelId
 {
+
+@UI.facet: [{ type: #IDENTIFICATION_REFERENCE,id: 'BookingHeader', label: 'Booking' ,position: 10 }
+]
+
     key travel_id as TravelId,
+    @UI.identification:[{position: 10}]
+    @UI.lineItem: [{ position: 10 }]
     key booking_id as BookingId,
     booking_date as BookingDate,
     customer_id as CustomerId,
@@ -25,6 +31,6 @@ and $projection.BookingId =  bookingSuppl.BookingId
     last_changed_at as LastChangedAt,
     
 //    Association
-    bookingSuppl
+    travel
     
 }

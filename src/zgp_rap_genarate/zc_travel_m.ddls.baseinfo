@@ -6,9 +6,13 @@
 "ZR_TRAVEL_M"
 ],
 "ASSOCIATED":
-[],
+[
+"ZGP_CDS_DVW_BOOKING"
+],
 "BASE":
-[],
+[
+"ZR_TRAVEL_M"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

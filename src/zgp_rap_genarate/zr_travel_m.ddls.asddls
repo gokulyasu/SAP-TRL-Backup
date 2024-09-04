@@ -3,6 +3,8 @@
 @EndUserText.label: '###GENERATED Core Data Service Entity'
 define root view entity ZR_TRAVEL_M
   as select from /dmo/travel_m
+  association [0..*] to zgp_cds_dvw_booking as booking on $projection.TravelId = booking.TravelId
+  
 {
   key travel_id as TravelId,
   agency_id as AgencyId,
@@ -24,5 +26,6 @@ define root view entity ZR_TRAVEL_M
   last_changed_by as LastChangedBy,
   @Semantics.systemDateTime.localInstanceLastChangedAt: true
   last_changed_at as LastChangedAt
-  
+  ,
+  booking
 }

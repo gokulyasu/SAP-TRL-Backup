@@ -1,4 +1,0 @@
-@EndUserText.label: 'Service definition'
-define service ZGP_SRV_mang_TRavel {
-  expose zgp_cds_dvw_bookingsuppl;
-}

@@ -22,3 +22,4 @@ define view entity ZGP_CDS_Booking as select from /dmo/booking_m
     
     
 }
+

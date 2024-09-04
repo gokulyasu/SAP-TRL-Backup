@@ -1,25 +1,31 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Travel View'
-@Metadata.ignorePropagatedAnnotations: true
 @ObjectModel.usageType:{
     serviceQuality: #X,
     sizeCategory: #S,
     dataClass: #MIXED
 }
 
-@UI.headerInfo: {
-    typeName: 'Travel',
-    typeNamePlural: 'Travels'
-}
-define view entity zgp_cds_dvw_travel
+
+define root view entity zgp_cds_dvw_travel
   as select from /dmo/travel_m 
-  association [0..*] to zgp_cds_dvw_booking as booking on $projection.TravelId = booking.TravelId
+  composition [0..*] of zgp_cds_dvw_booking as booking 
 {
+
+
+
+
+
+
   key travel_id       as TravelId,
+
       agency_id       as AgencyId,
+
       customer_id     as CustomerId,
+   
       begin_date      as BeginDate,
+
       end_date        as EndDate,
       @Semantics.amount.currencyCode: 'CurrencyCode'
       booking_fee     as BookingFee,

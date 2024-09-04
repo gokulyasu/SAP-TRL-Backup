@@ -3,11 +3,11 @@
 {
 "FROM":
 [
-"/DMO/BOOKING_M"
+"/DMO/TRAVEL_M"
 ],
 "ASSOCIATED":
 [
-"ZGP_CDS_DVW_TRAVEL"
+"ZGP_R_BOOKING_M"
 ],
 "BASE":
 [],

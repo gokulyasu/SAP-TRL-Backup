@@ -1,0 +1,30 @@
+managed implementation in class zgp_r_im_travel_m unique;
+strict ( 2 );
+
+define behavior for ZGP_R_TRAVEL_M alias Travel //alias <alias_name>
+persistent table /dmo/travel_m
+lock master
+authorization master ( instance )
+etag master LastChangedAt
+early numbering
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) TravelId;
+  association _booking { create; }
+  field(mandatory:create) AgencyId,CustomerId;
+  field (readonly) CreatedBy,CreatedAt, LastChangedBy,LastChangedAt;
+}
+
+define behavior for ZGP_R_BOOKING_M alias Booking//alias <alias_name>
+persistent table /dmo/booking_m
+lock dependent by _travel
+authorization dependent by _travel
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId;
+  association _travel;
+}

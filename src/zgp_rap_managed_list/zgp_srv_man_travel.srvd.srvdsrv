@@ -1,6 +1,7 @@
 @EndUserText.label: 'Managed serevice Travel'
 define service ZGP_SRV_man_TRavel {
-  expose zgp_cds_dvw_travel;
-  expose zgp_cds_dvw_booking;
-  expose zgp_cds_dvw_bookingsuppl;
+
+
+  expose ZGP_C_Travel;
+  expose ZGP_C_Booking;
 }
