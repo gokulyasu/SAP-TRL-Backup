@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition'
+define service ZMVN_SRV_TRAVEL {
+  expose ZMVN_C_TRAVEL;
+  expose ZMVN_C_Booking;
+}

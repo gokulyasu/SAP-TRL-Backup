@@ -1,5 +1,7 @@
 @Metadata.layer: #CORE
 
+
+
 @UI.headerInfo:{
 typeName: 'Travel',
 typeNamePlural: 'Travels' }

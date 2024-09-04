@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
 define root view entity ZGP_R_TRAVEL_M as select from /dmo/travel_m
 composition [0..*] of ZGP_R_BOOKING_M as _booking
 {

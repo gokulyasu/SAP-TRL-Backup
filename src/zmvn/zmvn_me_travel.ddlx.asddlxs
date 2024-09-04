@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+annotate view ZMVN_C_TRAVEL with
+{
+
+
+  @UI.lineItem: [{ position: 10 }]
+
+  TravelId;
+  @UI.lineItem: [{ position: 20 }]
+
+  AgencyId;
+
+  @UI.lineItem: [{ position: 30 }]
+  EndDate;
+  @UI.lineItem: [{ position: 40 }]
+  BookingFee;
+  @UI.lineItem: [{ position: 50 }]
+
+  TotalPrice;
+  @UI.lineItem: [{ position: 60 }]
+  CurrencyCode;
+  @UI.lineItem: [{ position: 70 }]
+  Description;
+  @UI.lineItem: [{ position: 80 }]
+  OverallStatus;
+  @UI.lineItem: [{ position: 90 }]
+  CreatedBy;
+  @UI.lineItem: [{ position: 100 }]
+  CreatedAt;
+  @UI.lineItem: [{ position: 110 }]
+  LastChangedBy;
+  @UI.lineItem: [{ position: 120 }]
+  LastChangedAt;
+
+}

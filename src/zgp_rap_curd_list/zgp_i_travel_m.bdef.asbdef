@@ -1,7 +1,7 @@
 projection;
 strict ( 2 );
 
-define behavior for ZGP_I_Travel_m //alias <alias_name>
+define behavior for ZGP_I_Travel_m alias Travel //alias <alias_name>
 {
   use create;
   use update;
