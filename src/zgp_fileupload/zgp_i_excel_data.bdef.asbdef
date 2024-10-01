@@ -1,0 +1,13 @@
+projection;
+strict ( 2 );
+
+define behavior for ZGP_I_EXCEL_DATA //alias <alias_name>
+{
+
+  field ( readonly ) LastChangedAt, LocalLastChangedBy, LocalLastChangedAt , LocalCreatedBy ,
+                      LocalCreatedAt;
+
+  use create;
+  use update;
+  use delete;
+}

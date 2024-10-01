@@ -1,0 +1,5 @@
+CLASS zbp_gp_c_excel_data DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zgp_c_excel_data.
+ENDCLASS.
+
+CLASS zbp_gp_c_excel_data IMPLEMENTATION.
+ENDCLASS.

@@ -17,13 +17,13 @@ typeNamePlural: 'Travels' }
 annotate view ZGP_I_Travel_m with
 {
 
-
+  
   @UI.facet: [{ type: #IDENTIFICATION_REFERENCE, id:'Travel' , label: 'Travel' ,purpose: #STANDARD ,position: 10},
   { type:#LINEITEM_REFERENCE,id:'Booking', label: 'Booking',targetElement: '_booking',  position: 20}]
 
   @UI:{
-   lineItem: [{ position: 10 }],
-  identification: [{ position: 10 }],
+   lineItem: [{ position: 10, type: #FOR_ACTION, dataAction: 'Order_details' ,label: 'Order Details' }],
+  identification: [{ position: 10 ,type: #FOR_ACTION, dataAction: 'Order_details', label: 'Order Details'}],
   selectionField: [{ position: 10 }]
   
   }

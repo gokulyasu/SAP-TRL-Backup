@@ -11,6 +11,7 @@ early numbering
   create;
   update;
   delete;
+  action (features : instance) Order_details result [1] $self;
   field ( readonly ) TravelId;
   association _booking { create; }
   field(mandatory:create) AgencyId,CustomerId;

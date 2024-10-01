@@ -1,0 +1,26 @@
+projection implementation in class zgp_r_im_travel_m unique;
+strict ( 2 );
+use draft;
+define behavior for ZGP_SU_C_TRAVEL alias _Travel//alias <alias_name>
+{
+//  use create;
+use action CreateCustom;
+  use update;
+  use delete;
+
+ use action Edit;
+
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use association _booking { create; }
+}
+
+define behavior for ZGP_SU_C_Booking alias _Booking//alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _Travel;
+}

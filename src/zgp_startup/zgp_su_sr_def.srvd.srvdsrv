@@ -1,0 +1,5 @@
+@EndUserText.label: 'Startup Definition'
+define service ZGP_SU_SR_DEF {
+  expose ZGP_SU_C_TRAVEL;
+  expose ZGP_SU_C_Booking;
+}

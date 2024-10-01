@@ -1,4 +1,6 @@
 @Metadata.layer: #CORE
+
+
 annotate view ZMVN_C_TRAVEL with
 {
 
@@ -13,6 +15,7 @@ annotate view ZMVN_C_TRAVEL with
   @UI.lineItem: [{ position: 30 }]
   EndDate;
   @UI.lineItem: [{ position: 40 }]
+  
   BookingFee;
   @UI.lineItem: [{ position: 50 }]
 

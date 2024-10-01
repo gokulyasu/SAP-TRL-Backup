@@ -1,0 +1,5 @@
+CLASS zbp_gp_su_i_travel DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zgp_su_i_travel.
+ENDCLASS.
+
+CLASS zbp_gp_su_i_travel IMPLEMENTATION.
+ENDCLASS.

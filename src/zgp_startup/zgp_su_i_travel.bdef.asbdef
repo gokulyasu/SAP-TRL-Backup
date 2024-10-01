@@ -1,0 +1,42 @@
+managed implementation in class zbp_gp_su_i_travel unique;
+strict ( 2 );
+with draft;
+define behavior for ZGP_SU_I_TRAVEL alias _Travel //alias <alias_name>
+draft table zgp_travel_draft
+persistent table /dmo/travel_m
+lock master total etag LastChangedAt
+//
+authorization master ( instance )
+with additional save
+
+//etag master <field_name>
+{
+  create;
+static action CreateCustom parameter ZGP_SU_A_TRAVEL ;
+  update;
+  delete;
+  field ( mandatory : create ) TravelId;
+  field ( features : instance ) AgencyId;
+  association _booking { create; }
+
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+}
+
+define behavior for ZGP_SU_I_Booking alias _Booking //alias <alias_name>
+draft table zgp_bking_draft
+persistent table /dmo/booking_m
+lock dependent by _Travel
+authorization dependent by _Travel
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId;
+  association _Travel;
+
+}

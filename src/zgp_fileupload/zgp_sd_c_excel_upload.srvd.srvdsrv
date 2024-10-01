@@ -1,0 +1,4 @@
+@EndUserText.label: 'Excel Upload'
+define service ZGP_SD_C_EXCEL_UPLOAD {
+  expose ZGP_I_EXCEL_DATA;
+}

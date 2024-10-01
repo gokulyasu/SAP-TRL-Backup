@@ -1,0 +1,20 @@
+managed implementation in class zbp_gp_c_excel_data unique;
+strict ( 2 );
+
+define behavior for ZGP_C_EXCEL_DATA //alias <alias_name>
+persistent table zexceldatatwo
+lock master
+
+authorization master ( instance )
+etag master LastChangedAt
+{
+
+
+  field ( readonly ) LastChangedAt, LocalLastChangedBy, LocalLastChangedAt , LocalCreatedBy ,
+                      LocalCreatedAt;
+
+  create;
+  update;
+  delete;
+  field ( readonly ) Invoice;
+}
